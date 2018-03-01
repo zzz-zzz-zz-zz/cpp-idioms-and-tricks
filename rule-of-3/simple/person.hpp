@@ -24,7 +24,7 @@ private:
     char *name;
     int age;
 
-    static int amount;
+    static int amount; // Don't need in real program.
 };
 
 

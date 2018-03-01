@@ -7,7 +7,7 @@ Person::Person(const char* the_name, int the_age)
     // Common situtation: creating new object from parameters
     //      by copying.
     std::cout << "New person: " << the_name << ", " << the_age << " y.o." << std::endl;
-    amount++; // NEW PERSON
+    amount++; // NEW PERSON. Note: `amount` don't need in real program!!!
     status();
 
     name = new char[strlen(the_name)+1];
@@ -22,7 +22,7 @@ Person::Person(const Person &that) // copy constructor
     //      allocated new space for it to copy.
     // Note: take care of std::bad_alloc in case of 2 or more dynamic resources.
     std::cout << "New person from existing one: " << that.name << ", " << that.age << " y.o." << std::endl;
-    amount++; // NEW PERSON
+    amount++; // NEW PERSON. Note: `amount` don't need in real program!!!
     status();
     
     name = new char[strlen(that.name)+1];
@@ -59,7 +59,7 @@ Person::~Person() // destructor
     // Do not forget to delete allocated memory. Automatic variables will be
     //      calling for this automatically in end of their scope.
     std::cout << "Deleting Person " << name << ", " << age << " y.o. Bye :(" << std::endl;
-    amount--;
+    amount--; // Note: `amount` don't need in real program!!!
     status();
 
     delete[] name;    
